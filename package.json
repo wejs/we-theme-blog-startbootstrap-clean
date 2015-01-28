@@ -1,0 +1,17 @@
+{
+  "name": "we-theme-blog-startbootstrap-clean",
+  "version": "0.0.1",
+  "description": "We.js startbootstrap clean theme - see https://github.com/IronSummitMedia/startbootstrap-clean-blog",
+  "homepage": "https://github.com/IronSummitMedia/startbootstrap-clean-blog",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wejs/we-theme-blog-startbootstrap-clean.git"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

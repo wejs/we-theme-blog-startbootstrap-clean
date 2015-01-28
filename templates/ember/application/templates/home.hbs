@@ -1,0 +1,15 @@
+{{partial 'partials/header' }}
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div>{{#link-to 'articles.create'}}Create article{{/link-to}}</div>
+
+      {{render 'articles.list' records}}
+
+    </div>
+
+    {{partial 'partials/sidebar' }}
+  </div>
+</div>
