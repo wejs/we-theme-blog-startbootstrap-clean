@@ -4,7 +4,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div>{{#link-to 'articles.create'}}Create article{{/link-to}}</div>
+      <div>
+        {{#can 'article_create'}}
+          {{#link-to 'articles.create'}}Create article{{/link-to}}
+        {{/can}}
+      </div>
 
       {{render 'articles.list' records}}
 
