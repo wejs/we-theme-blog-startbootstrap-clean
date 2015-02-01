@@ -3,7 +3,7 @@
 <!-- Main Content -->
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <div>
         {{#can 'article_create'}}
           {{#link-to 'articles.create'}}Create article{{/link-to}}
@@ -13,7 +13,7 @@
       {{render 'articles.list' records}}
 
     </div>
-
-    {{partial 'partials/sidebar' }}
+{{!--
+    {{partial 'partials/sidebar' }} --}}
   </div>
 </div>
