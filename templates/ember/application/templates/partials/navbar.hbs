@@ -11,8 +11,8 @@
       </button>
 
       {{#link-to 'home' classNames="navbar-brand"}}
-        <img class="img-responsive navbar-logo" {{bind-attr src=App.appLogo }}>
-        {{App.appName}}
+        <img class="img-responsive navbar-logo" {{bind-attr src=configs.client.publicVars.appLogo}}>
+        {{configs.client.publicVars.appName}}
       {{/link-to}}
 
     </div>

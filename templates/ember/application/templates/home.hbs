@@ -6,7 +6,9 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <div>
         {{#can 'article_create'}}
-          {{#link-to 'articles.create'}}Create article{{/link-to}}
+          {{#link-to 'articles.create'}}
+            {{t 'article.create'}}
+          {{/link-to}}
         {{/can}}
       </div>
 

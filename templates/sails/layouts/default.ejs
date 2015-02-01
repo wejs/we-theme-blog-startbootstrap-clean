@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%- title %></title>
+    <title><%- sails.config.clientside.publicVars.appName %> | <%- title %></title>
 
     <% if (typeof metadata !== 'undefined' || metadata) { %>
       <% include ../partials/metadata %>
