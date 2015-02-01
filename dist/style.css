@@ -437,3 +437,61 @@ body {
   background-color: #fff !important;
   color: #000 !important;
 }
+
+
+
+/* Comments */
+.comment {
+  margin: 15px 0px;
+}
+
+.comment .actions button{
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.comment-form {
+ margin: 10px 0px;
+ min-height: 45px;
+}
+
+.comment-area .createdAt {
+  color: #aaa;
+}
+
+.comment-left {
+  float: left;
+}
+
+.creator-avatar img {
+  width: 45px;
+}
+
+.comment-right {
+  margin-left: 53px;
+}
+
+.comment-total {
+  margin: 10px 0px;
+}
+
+.comments-header {
+  margin: 5px 0px 10px 0px;
+  font-size: 0.7em;
+}
+
+.comment-form .user-avatar-area {
+
+}
+
+.comment-form .creator-avatar img {
+  width: 45px
+}
+
+.comment-placeholder {
+  padding: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
