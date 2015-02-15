@@ -6703,8 +6703,7 @@ hr.small {
   }
 }
 .intro-header {
-  background-color: #808080;
-  background: no-repeat center center;
+  background: no-repeat center center #444;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6966,8 +6965,8 @@ body {
 
 /* extra theme css */
 .intro-header.header-small {
-  height: 60px;:;
-  background-color: #404040;
+  min-height: 60px;
+  background-color: #444;
 }
 
 .post-heading textarea,
