@@ -7061,3 +7061,9 @@ body {
   border: 1px solid #ccc;
   cursor: pointer;
 }
+
+.no-bg {
+  min-height: 65px;
+  background-color: #666;
+}
+
