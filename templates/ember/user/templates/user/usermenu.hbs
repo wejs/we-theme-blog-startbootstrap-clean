@@ -16,12 +16,17 @@
           {{t 'View / edit profile'}}
         {{/link-to}}
       </li>
+      <li>
+        {{#link-to 'authChangePassword'}}{{t 'Change password'}}{{/link-to}}
+      </li>
+      <li class="divider"></li>           
       {{#if adminMenu}}
       <li>
         <a href="/admin">
           {{t 'menu.link.manage'}}
         </a>
-      </li>      
+      </li>   
+      <li class="divider"></li>  
       {{/if}}
       <li class="divider"></li>
       <li>
