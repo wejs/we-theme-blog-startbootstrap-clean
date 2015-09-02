@@ -1,0 +1,15 @@
+{{#each record}}
+  <div class="post-preview">
+    {{#link-to 'article.findOne' id}}
+      <h2 class="post-title">{{title}}</h2>
+      <h3 class="post-subtitle">{{about}}</h3>
+    {{/link-to}}
+    {{#if creator}}
+      <p class="post-meta">{{t 'Posted by'}}
+      {{#link-to 'user.findOne' creator.id}}{{creator.displayName}}{{/link-to}} {{t 'on'}} {{we-date createdAt}} </p>
+    {{/if}}
+  </div>
+  <hr>
+{{/each}}
+
+{{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}

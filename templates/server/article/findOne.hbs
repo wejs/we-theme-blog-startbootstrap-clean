@@ -1,0 +1,7 @@
+{{#if record.creator}}<div class="article-creator">
+  <p class="post-meta">{{t 'Posted by'}}
+  {{#link-to 'user.findOne' record.creator.id}}{{record.creator.displayName}}{{/link-to}} {{t 'on'}} {{we-date record.createdAt}} </p>
+</div>{{/if}}
+{{we-action-edit-btn resourceName record req record.id}}
+{{we-action-delete-btn resourceName record req record.id}}
+<div class="article">{{{record.body}}}</div>
