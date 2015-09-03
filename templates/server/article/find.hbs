@@ -10,6 +10,8 @@
     {{/if}}
   </div>
   <hr>
+{{else}}
+  <p>{{t 'article.find.empty'}}</p>
 {{/each}}
 
 {{paginate count=metadata.count limit=query.limit currentPage=query.page req=req}}
