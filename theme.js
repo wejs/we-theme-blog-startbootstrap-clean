@@ -24,18 +24,18 @@ module.exports = {
           name: 'Highlighted'
         },
         afterContent: {
-          name: 'After Content'
+          name: 'After content'
         }
       }
     },
-    'article/layout': {
+    'article-layout': {
       template: __dirname + '/templates/server/layouts/article.hbs',
       regions: {
         highlighted: {
           name: 'Highlighted'
         },
         afterContent: {
-          name: 'After Content'
+          name: 'After content'
         }
       }
     }
