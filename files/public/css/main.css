@@ -9,3 +9,12 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
 .navbar-custom .nav .dropdown-menu li a {
   color: #000;
 }
+
+
+.site-logo {
+  width: 50px;
+  float: left;
+  margin-top: -10px;
+  margin-right: 5px;
+  border-radius: 8px;
+}
