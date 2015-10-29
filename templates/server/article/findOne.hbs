@@ -1,9 +1,17 @@
 {{#if data.creator}}<div class="article-creator">
   <p class="post-meta">{{t 'Posted by'}}
-  {{#link-to-record record=data.creator}}{{data.creator.displayName}}{{/link-to-record}}
-  {{t 'on'}} {{we-date data.createdAt}} </p>
+    {{#link-to-record record=data.creator}}{{data.creator.displayName}}{{/link-to-record}}
+    {{t 'on'}} {{we-date data.createdAt}}
+    {{#if data.category}}{{#each data.category}}<small>- {{this}}</small>{{/each}}{{/if}}
+  </p>
 </div>{{/if}}
 {{we-action-edit-btn resourceName data req data.id}}
 {{we-action-delete-btn resourceName data req data.id}}
 <div class="article">{{{data.body}}}</div>
+
+{{#if data.tags}}
+  <div>{{t 'form-article-tags'}}: {{we-terms data.tags}}</div>
+  <div class="clearfix"> </div>
+{{/if}}
+
 <hr>
