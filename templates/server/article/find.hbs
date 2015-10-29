@@ -1,4 +1,7 @@
-<div class="actions">{{we-action-create-btn 'article' req}}</div>
+<div class="actions">
+  {{we-action-create-btn 'article' req}}
+  {{rss-btn locals=this}}
+</div>
 {{#each data}}
   {{render-record-teaser modelName='article' record=this locals=..}}
   <hr>
