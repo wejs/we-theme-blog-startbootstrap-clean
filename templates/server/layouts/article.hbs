@@ -1,5 +1,5 @@
 <header class="intro-header"
-{{#each record.featuredImage}}
+{{#each data.featuredImage}}
   style="background-image: url('{{urls.original}}')"
 {{else}}
   {{#if req.we.config.site.homeBg}}
@@ -15,8 +15,8 @@
         <div class="site-heading">
           <h1>{{title}}</h1>
           <hr class="small">
-          {{#if record.about}}
-            <span class="subheading">{{record.about}}</span>
+          {{#if data.about}}
+            <span class="subheading">{{data.about}}</span>
           {{else}}
             <span class="subheading">{{req.we.config.subtitle}}</span>
           {{/if}}

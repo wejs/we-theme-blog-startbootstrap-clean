@@ -1,8 +1,9 @@
-{{#if record.creator}}<div class="article-creator">
+{{#if data.creator}}<div class="article-creator">
   <p class="post-meta">{{t 'Posted by'}}
-  {{#link-to 'user.findOne' record.creator.id}}{{record.creator.displayName}}{{/link-to}} {{t 'on'}} {{we-date record.createdAt}} </p>
+  {{#link-to-record record=data.creator}}{{data.creator.displayName}}{{/link-to-record}}
+  {{t 'on'}} {{we-date data.createdAt}} </p>
 </div>{{/if}}
-{{we-action-edit-btn resourceName record req record.id}}
-{{we-action-delete-btn resourceName record req record.id}}
-<div class="article">{{{record.body}}}</div>
+{{we-action-edit-btn resourceName data req data.id}}
+{{we-action-delete-btn resourceName data req data.id}}
+<div class="article">{{{data.body}}}</div>
 <hr>

@@ -18,3 +18,8 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
   margin-right: 5px;
   border-radius: 8px;
 }
+
+
+.intro-header .site-heading h1, .intro-header .page-heading h1 {
+  font-size: 45px;
+}
