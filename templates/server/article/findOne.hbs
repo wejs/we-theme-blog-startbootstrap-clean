@@ -9,6 +9,35 @@
 {{we-action-delete-btn resourceName data req data.id}}
 <div class="article">{{{data.body}}}</div>
 
+{{#if data.images}}
+  <h4 class="article-galery-title">{{t 'form-article-images'}}</h4>
+  <div class="article-galery">
+    {{we-fancybox-galery id="articleImageGalery" rel="article" images=data.images style='medium'}}
+  </div>
+{{/if}}
+
+{{#if data.attachment}}
+  <h4 class="article-attachment-title">{{t 'form-article-attachment'}}</h4>
+  <div class="article-attachment">
+    <table class="table table-bordered">
+      <thead><tr>
+        <th>{{t 'Name'}}</th>
+        <th>{{t 'Actions'}}</th>
+      </tr></thead>
+      <tbody>
+        {{#each data.attachment}}
+          <tr>
+            <td data-file-name>{{originalname}}</td>
+            <td>
+              <a class="btn btn-default" href="{{urls.original}}" text="{{originalname}}" download="{{originalname}}">{{t 'download'}}</a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{/if}}
+
 {{#if data.tags}}
   <div>{{t 'form-article-tags'}}: {{we-terms data.tags}}</div>
   <div class="clearfix"> </div>
