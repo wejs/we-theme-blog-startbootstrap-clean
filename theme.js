@@ -25,6 +25,9 @@ module.exports = {
         },
         afterContent: {
           name: 'After content'
+        },
+        sidebar: {
+          name: 'Side bar'
         }
       }
     },

@@ -2,7 +2,11 @@
   <p class="post-meta">{{t 'Posted by'}}
     {{#link-to-record record=data.creator}}{{data.creator.displayName}}{{/link-to-record}}
     {{t 'on'}} {{we-date data.createdAt}}
-    {{#if data.category}}{{#each data.category}}<small>- {{this}}</small>{{/each}}{{/if}}
+    {{#if data.category}}{{#each data.category}}
+      <small>-
+      {{#link-to 'term.findOne' 'Category' this}} {{this}} {{/link-to}}
+      </small>
+    {{/each}}{{/if}}
   </p>
 </div>{{/if}}
 {{we-action-edit-btn resourceName data req data.id}}
@@ -39,8 +43,9 @@
 {{/if}}
 
 {{#if data.tags}}
-  <div>{{t 'form-article-tags'}}: {{we-terms data.tags}}</div>
+  <div>{{t 'form-article-tags'}}: {{we-terms data.tags }}</div>
   <div class="clearfix"> </div>
 {{/if}}
 
 <hr>
+
