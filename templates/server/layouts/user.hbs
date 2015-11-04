@@ -1,0 +1,47 @@
+<header class="intro-header"
+{{#each data.banner}}
+  style="background-image: url('{{urls.original}}')"
+{{else}}
+  {{#if req.we.config.site.homeBg}}
+    style="background-image: url('{{req.we.config.site.homeBg}}')"
+  {{else}}
+    style="background-image: url('/public/theme/we-theme-blog-startbootstrap-clean/img/home-bg.jpg')"
+  {{/if}}
+{{/each}} >
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading {{#ifCond name 'user.findOne'}}{{else}}small{{/ifCond}}">
+          <h1>{{data.displayName}}</h1>
+          <hr class="small">
+          <span class="subheading">{{#each data.organization}}{{this}}{{/each}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" id="sysMessagesArea">{{{we-messages}}}</div>
+
+    {{#region 'highlighted' class="col-md-12"}}{{/region}}
+
+    <div class="col-md-3">
+      {{#each data.avatar}}
+        {{we-image this 'medium' class="thumbnail"}}
+      {{else}}
+        <img src="/public/theme/we-theme-blog-startbootstrap-clean/img/avatar.png" class="img-thumbnail">
+      {{/each}}
+
+      <div class="user-username text-center">@{{data.username}}</div>
+
+      {{#region 'sidebar'}}{{/region}}
+    </div>
+    <div class="col-md-9">
+      {{{body}}}
+      {{#region 'afterContent'}}{{/region}}
+    </div>
+  </div>
+</div>
