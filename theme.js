@@ -55,6 +55,17 @@ module.exports = {
           name: 'Sidebar'
         }
       }
+    },
+    'portfolio-layout': {
+      template: __dirname + '/templates/server/layouts/portfolio.hbs',
+      regions: {
+        highlighted: {
+          name: 'Highlighted'
+        },
+        afterContent: {
+          name: 'After content'
+        }
+      }
     }
   },
   widgets: {}
