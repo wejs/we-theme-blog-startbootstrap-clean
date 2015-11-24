@@ -90,3 +90,7 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
 .site-heading.small {
   padding: 70px 0px 5px 0px;
 }
+
+.intro-header .container {
+  background: rgba(0, 0, 0, 0.7);
+}
