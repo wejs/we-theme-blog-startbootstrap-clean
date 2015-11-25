@@ -1,7 +1,7 @@
 <div class="actions">
   {{we-action-create-btn 'article' req}}
 
-  {{#can permission='access_articles_unpublished' roles=req.userRoleNames}}
+  {{#can permission='access_articles_unpublished' roleNames=req.userRoleNames}}
     {{#if query.where.published}}
       <a class="btn btn-default" href="{{req.path}}?published=false">{{t 'article.unpublished'}}</a>
     {{else}}
