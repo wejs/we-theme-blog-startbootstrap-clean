@@ -1,5 +1,15 @@
 <div class="actions">
   {{we-action-create-btn 'article' req}}
+
+  {{#can permission='access_articles_unpublished' roles=req.userRoleNames}}
+    {{#if query.where.published}}
+      <a class="btn btn-default" href="{{req.path}}?published=false">{{t 'article.unpublished'}}</a>
+    {{else}}
+      <a class="btn btn-default" href="{{req.path}}?published=true">{{t 'article.published'}}</a>
+    {{/if}}
+
+  {{/can}}
+
   {{rss-btn locals=this}}
 </div>
 {{#each data}}

@@ -94,3 +94,16 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
 .intro-header .container {
   background: rgba(0, 0, 0, 0.7);
 }
+
+.publish-btn-form {
+  display: inline;
+}
+
+.unpublished {
+  background-color: rgba(200, 50, 50, 0.15);
+}
+
+.unpublished:hover {
+  background-color: transparent;
+}
+
