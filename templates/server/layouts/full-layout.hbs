@@ -1,7 +1,13 @@
-<!-- Page Header -->
-<!-- Set your background image for this header on the line below. -->
 <header class="intro-header"
-  style="background-image: url('/public/theme/we-theme-blog-startbootstrap-clean/img/home-bg.jpg')"
+  {{#each data.featuredImage}}
+    style="background-image: url('{{urls.original}}')"
+  {{else}}
+    {{#if req.we.config.site.homeBg}}
+      style="background-image: url('{{req.we.config.site.homeBg}}')"
+    {{else}}
+      style="background-image: url('/public/theme/we-theme-blog-startbootstrap-clean/img/home-bg.jpg')"
+    {{/if}}
+  {{/each}}
 >
   <div class="container">
     <div class="row">
