@@ -6,7 +6,7 @@ Example: http://albertosouza.net
 
 ## Screenshot
 
-![Screenshot example](https://wejs.org/api/v1/image/large/1462250733565_def8f1e0-10e9-11e6-b9b8-3bcad79a0ed3.png "Screenshot")
+![Screenshot example](https://wejs.org/api/v1/image/original/1462250733565_def8f1e0-10e9-11e6-b9b8-3bcad79a0ed3.png "Screenshot")
 
 ## How to develop:
 
