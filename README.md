@@ -1,4 +1,4 @@
-# Simple blog theme for we.js
+# We.js Startbootstrap Clean theme
 
 > Default we.js blog project theme.
 
