@@ -9,8 +9,8 @@ module.exports = {
     emailTemplates: {
       path: 'templates/email',
     },
-    javascript: 'files/public/js/main.js',
-    stylesheet: 'files/public/css/main.css'
+    javascript: 'files/public/script.js',
+    stylesheet: 'files/public/style.css'
   },
   autoLoadAllTemplates: true,
   // will be auto loaded
