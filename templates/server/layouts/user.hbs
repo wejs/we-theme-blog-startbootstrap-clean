@@ -12,11 +12,18 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="site-heading {{#ifCond name 'user.findOne'}}{{else}}small{{/ifCond}}">
-          <h1>{{data.displayName}}</h1>
-          <hr class="small">
-          <span class="subheading">{{#each data.organization}}{{this}}{{/each}}</span>
-        </div>
+        {{#ifCond model 'user'}}
+          <div class="site-heading {{#ifCond name 'user.findOne'}}{{else}}small{{/ifCond}}">
+            <h1>{{data.displayName}}</h1>
+            <hr class="small">
+            <span class="subheading">{{#each data.organization}}{{this}}{{/each}}</span>
+          </div>
+        {{else}}
+          <div class="site-heading {{#ifCond name 'user.findOne'}}{{else}}small{{/ifCond}}">
+            <h1>{{title}}</h1>
+            <hr class="small">
+          </div>
+        {{/ifCond}}
       </div>
     </div>
   </div>
