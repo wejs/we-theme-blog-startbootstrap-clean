@@ -1,0 +1,32 @@
+<header class="intro-header"
+  {{#if req.we.config.site.homeBg}}
+    style="background-image: url('{{req.we.config.site.homeBg}}')"
+  {{else}}
+    style="background-image: url('/public/theme/we-theme-blog-startbootstrap-clean/img/home-bg.jpg')"
+  {{/if}}
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>{{title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div>{{we-breadcrumb locals=this}}</div>
+
+      <div id="sysMessagesArea">{{{we-messages}}}</div>
+
+      {{#region 'highlighted'}}{{/region}}
+      <div id="content" role="main">{{{body}}}</div>
+      {{#region 'afterContent'}}{{/region}}
+    </div>
+  </div>
+</div>

@@ -66,6 +66,17 @@ module.exports = {
           name: 'After content'
         }
       }
+    },
+    'fullwidth': {
+      template: __dirname + '/templates/server/layouts/fullwidth.hbs',
+      regions: {
+        highlighted: {
+          name: 'Highlighted'
+        },
+        afterContent: {
+          name: 'After content'
+        }
+      }
     }
   },
   widgets: {}
