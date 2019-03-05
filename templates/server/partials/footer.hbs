@@ -6,7 +6,7 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         {{we-menu req.we.menu.social}}
         <p class="copyright text-muted">
-          Copyleft, <strong>{{req.we.config.appName}}</strong> 2015
+          Copyleft, <strong>{{#if req.we.systemSettings.siteName}}{{req.we.systemSettings.siteName}}{{else}}{{req.we.config.appName}}{{/if}}</strong> 2019
           - <a href="http://wejs.org">We.js ;) powered!</a>
         </p>
       </div>

@@ -9,11 +9,27 @@
           <span class="icon-bar"></span>
         </button>
         {{#link-to 'main.index' class="navbar-brand"}}
-          {{#if req.we.config.appLogo}}<img class="site-logo" src="{{req.we.config.appLogo}}">{{/if}}
-          {{appName}}
+          {{#if req.we.systemSettings.logoUrl}}
+            <img src="{{req.we.systemSettings.logoUrl}}"
+              alt="Logo"
+              class="site-logo"
+            >
+          {{else}}
+            {{#if req.we.config.appLogo}}
+              <img class="site-logo" src="{{req.we.config.appLogo}}">
+            {{else}}
+              <img src="/public/project/logo.png" alt="Logo" class="site-logo">
+            {{/if}}
+          {{/if}}
+          {{#if req.we.systemSettings.siteName}}
+            <span class="site-name">{{req.we.systemSettings.siteName}}</span>
+          {{else}}
+            {{appName}}
+          {{/if}}
+
         {{/link-to}}
     </div>
     {{we-menu req.we.menu.main}}
-    {{we-menu userMenu}}
+    {{we-menu userMenu class="nav navbar-nav navbar-right"}}
   </div>
 </nav>

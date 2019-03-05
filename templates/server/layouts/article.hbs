@@ -29,12 +29,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">{{we-breadcrumb locals=this}}</div>
-
+    <div class="col-md-12">{{#region 'highlighted'}}{{/region}}</div>
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
       <div id="sysMessagesArea">{{{we-messages}}}</div>
 
-      {{#region 'highlighted'}}{{/region}}
+      {{#region 'beforeContent'}}{{/region}}
       <div id="content" role="main">{{{body}}}</div>
       {{#region 'afterContent'}}{{/region}}
     </div>

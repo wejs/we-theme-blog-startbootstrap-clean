@@ -32,11 +32,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12" id="sysMessagesArea">{{{we-messages}}}</div>
-
+    <div class="col-md-12">{{#region 'highlighted'}}{{/region}}</div>
     <div class="col-md-12">{{we-breadcrumb locals=this}}</div>
-
-    {{#region 'highlighted' class="col-md-12"}}{{/region}}
-
+    {{#region 'beforeContent' class="col-md-12"}}{{/region}}
     <div class="col-md-3">
       {{#each data.avatar}}
         {{we-image this 'medium' class="thumbnail"}}

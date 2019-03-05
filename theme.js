@@ -4,13 +4,28 @@
  */
 
 module.exports = {
+  imageThumbnail: '',
+  imageLarge: '',
+  description: 'Simple blog template',
+
   // theme config
   configs: {
     emailTemplates: {
       path: 'templates/email',
     },
     javascript: 'files/public/script.js',
-    stylesheet: 'files/public/style.css'
+    stylesheet: 'files/public/style.css',
+    colors: {
+      default: {
+        label: 'Cor padrão do tema',
+        stylesheet: 'files/public/style.css',
+        colors: [
+          { value: '#2D7240' },
+          { value: '#000' },
+          { value: '#fff' }
+        ]
+      },
+    }
   },
   autoLoadAllTemplates: true,
   // will be auto loaded
@@ -22,6 +37,9 @@ module.exports = {
       regions: {
         highlighted: {
           name: 'Highlighted'
+        },
+        beforeContent: {
+          name: 'Before content'
         },
         afterContent: {
           name: 'After content'
@@ -37,6 +55,9 @@ module.exports = {
         highlighted: {
           name: 'Highlighted'
         },
+        beforeContent: {
+          name: 'Before content'
+        },
         afterContent: {
           name: 'After content'
         }
@@ -47,6 +68,9 @@ module.exports = {
       regions: {
         highlighted: {
           name: 'Highlighted'
+        },
+        beforeContent: {
+          name: 'Before content'
         },
         afterContent: {
           name: 'After content'
@@ -61,6 +85,9 @@ module.exports = {
       regions: {
         highlighted: {
           name: 'Highlighted'
+        },
+        beforeContent: {
+          name: 'Before content'
         },
         afterContent: {
           name: 'After content'
