@@ -1,11 +1,11 @@
 <div class="post-preview {{#unless record.published}}unpublished{{/unless}}">
-  {{#if record.featuredImage.length}}
+  {{!-- {{#if record.featuredImage.length}}
     <div class="article-teaser-bg"
       {{#each record.featuredImage}}
         style="background: url('{{urls.original}}') no-repeat center center; background-size: cover;"
       {{/each}}
     ></div>
-  {{/if}}
+  {{/if}} --}}
 
   {{#link-to-record record=record}}
     <h2 class="post-title">
