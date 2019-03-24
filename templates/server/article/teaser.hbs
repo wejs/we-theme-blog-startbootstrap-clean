@@ -1,15 +1,17 @@
-<div class="post-preview portfolio-teaser {{#unless record.published}}unpublished{{/unless}}">
-  {{#link-to-record record=record}}
-    {{#each record.featuredImage}}
-      {{we-image this 'medium' class="img-thumbnail"}}
-    {{/each}}
-  {{/link-to-record}}
+<div class="post-preview {{#unless record.published}}unpublished{{/unless}}">
+  {{#if record.featuredImage.length}}
+    <div class="article-teaser-bg"
+      {{#each record.featuredImage}}
+        style="background: url('{{urls.original}}') no-repeat center center; background-size: cover;"
+      {{/each}}
+    ></div>
+  {{/if}}
 
   {{#link-to-record record=record}}
     <h2 class="post-title">
       {{record.title}} {{#unless record.published}} <small><span class="label label-warning">{{t 'article.unpublished'}}</span></small> {{/unless}}
     </h2>
-    <h3 class="post-subtitle">{{we-strip-tags text=record.description maxLength=150}}</h3>
+    <h3 class="post-subtitle">{{record.about}}</h3>
   {{/link-to-record}}
   {{#if record.creator}}
     <p class="post-meta">{{t 'Posted by'}}
