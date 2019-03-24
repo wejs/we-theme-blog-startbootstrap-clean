@@ -1,0 +1,19 @@
+<div class="post-preview {{#unless record.published}}unpublished{{/unless}}">
+  {{#link-to-record record=record}}
+    <h2 class="post-title">
+      {{record.title}} {{#unless record.published}} <small><span class="label label-warning">{{t 'article.unpublished'}}</span></small> {{/unless}}
+    </h2>
+    <h3 class="post-subtitle">{{we-strip-tags text=record.description maxLength=150}}</h3>
+  {{/link-to-record}}
+  {{#if record.creator}}
+    <p class="post-meta">{{t 'Posted by'}}
+    {{#link-to-record record=record.creator}} {{record.creator.displayName}} {{/link-to-record}}
+    {{t 'on'}} {{we-date record.createdAt locals=locals}}
+    {{#if record.category}}{{#each record.category}}
+      <small>-
+        {{#link-to 'term.findOne' 'Category' this}} {{this}} {{/link-to}}
+      </small>
+    {{/each}}{{/if}}
+    </p>
+  {{/if}}
+</div>
