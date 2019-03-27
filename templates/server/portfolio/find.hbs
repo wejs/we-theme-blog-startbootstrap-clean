@@ -1,0 +1,42 @@
+<div class="actions">
+{{we-action-create-btn resourceName req}}
+</div>
+
+<div class="portfolio-find">
+  {{#each data}}
+    {{#isPair @index}}
+      <div class="portfolio-teaser-item even">
+        {{#link-to-record record=this}}
+          {{#each featuredImage}}
+            {{we-image this 'original' class="img-thumbnail portifolio-featuredImage-fteaser"}}
+          {{/each}}
+          <h3>{{we-strip-tags text=title maxLength=150}}</h3>
+          {{#if projectDate}}
+            <div class="pti-project-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Desenvolvido em: {{we-date projectDate 'MM/YYYY' locals=..}}</div>
+          {{/if}}
+          {{we-strip-tags text=description maxLength=300}}
+          <div class="read-more">
+            <a href="/portfolio/{{id}}">+ Ler mais</a>
+          </div>
+        {{/link-to-record}}
+      </div>
+    {{else}}
+      <div class="portfolio-teaser-item odd">
+        {{#link-to-record record=this}}
+          {{#each featuredImage}}
+            {{we-image this 'original' class="img-thumbnail portifolio-featuredImage-fteaser"}}
+          {{/each}}
+        {{/link-to-record}}
+        <h3>{{we-strip-tags text=title maxLength=150}}</h3>
+        {{#if projectDate}}
+          <div class="pti-project-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Desenvolvido em: {{we-date projectDate 'MM/YYYY' locals=..}}</div>
+        {{/if}}
+        {{we-strip-tags text=description maxLength=300}}
+        <div class="read-more">
+          <a href="/portfolio/{{id}}">+ Ler mais</a>
+        </div>
+      </div>
+    {{/isPair}}
+    <div class="clearfix"></div>
+  {{/each}}
+</div>
