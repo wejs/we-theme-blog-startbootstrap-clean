@@ -2,34 +2,38 @@
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        {{#link-to 'main.index' class="navbar-brand"}}
-          {{#if req.we.systemSettings.logoUrl}}
-            <img src="{{req.we.systemSettings.logoUrl}}"
-              alt="Logo"
-              class="site-logo"
-            >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{!-- brancd: --}}
+      {{#link-to 'main.index' class="navbar-brand"}}
+        {{#if req.we.systemSettings.logoUrl}}
+          <img src="{{req.we.systemSettings.logoUrl}}"
+            alt="Logo"
+            class="site-logo"
+          >
+        {{else}}
+          {{#if req.we.config.appLogo}}
+            <img class="site-logo" src="{{req.we.config.appLogo}}">
           {{else}}
-            {{#if req.we.config.appLogo}}
-              <img class="site-logo" src="{{req.we.config.appLogo}}">
-            {{else}}
-              <img src="/public/project/logo.png" alt="Logo" class="site-logo">
-            {{/if}}
+            <img src="/public/project/logo.png" alt="Logo" class="site-logo">
           {{/if}}
-          {{#if req.we.systemSettings.siteName}}
-            <span class="site-name">{{req.we.systemSettings.siteName}}</span>
-          {{else}}
-            {{appName}}
-          {{/if}}
+        {{/if}}
+        {{#if req.we.systemSettings.siteName}}
+          <span class="site-name">{{req.we.systemSettings.siteName}}</span>
+        {{else}}
+          {{appName}}
+        {{/if}}
 
-        {{/link-to}}
+      {{/link-to}}
     </div>
-    {{we-menu req.we.menu.main}}
-    {{we-menu userMenu class="nav navbar-nav navbar-right"}}
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        {{we-menu req.we.menu.main}}
+        {{we-menu userMenu class="nav navbar-nav navbar-right"}}
+      </div>
   </div>
 </nav>

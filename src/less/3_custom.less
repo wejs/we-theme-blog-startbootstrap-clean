@@ -74,9 +74,17 @@
 .tags a:hover{background:#555;}
 .tags a:over:before{border-color:transparent #555 transparent transparent;}
 
-.rss-link img{
-  height: 53px;
+.rss-link {
+  // position: fixed;
+  // bottom: 4px;
+  // right: 58px;
+
+  img {
+    float: right;
+    height: 35px;
+  }
 }
+
 
 .site-heading.small {
   padding: 70px 0px 5px 0px;
@@ -86,6 +94,7 @@
 .intro-header {
   min-height: 70px;
 }
+
 
 .intro-header .container {
   background: rgba(0, 0, 0, 0.7);
@@ -170,5 +179,43 @@
   img {
     max-width: 100%;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .site-logo {
+    width: auto;
+    height: 42px;
+  }
+
+  .navbar-custom {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .navbar-collapse.collapse.in,
+  .navbar-collapse.collapsing {
+    background-color: #000;
+  }
+
+  .site-name {
+    color: #FFF;
+
+  }
+
+  .intro-header {
+    min-height: 55px;
+    margin-bottom: 15px;
+  }
+
+  .category-menu {
+    li {
+      display: inline-block;
+    }
+  }
+
+  .post-meta {
+    margin-top: 0px;
+    font-size: 0.8em;
   }
 }
