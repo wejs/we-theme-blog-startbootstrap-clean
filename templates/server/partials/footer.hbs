@@ -1,8 +1,59 @@
 <hr>
-<!-- Footer -->
 <footer>
   <div class="container">
     <div class="row">
+      <div class="col-md-4">
+        <div class="footer-item-1">
+          <h4>Contatos</h4>
+          <address>
+            {{#if req.we.systemSettings.siteAddress}}
+              <p>
+                <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i> {{{req.we.systemSettings.siteAddress}}}
+              </p>
+            {{/if}}
+            <ul class="list-unstyled">
+              {{#if req.we.systemSettings.sitePhone1}}
+                <li>
+                  <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> Telefone: {{req.we.systemSettings.sitePhone1}}
+                </li>
+              {{/if}}
+              {{#if req.we.systemSettings.sitePhone2}}
+                <li>
+                  <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> Telefone 2: {{req.we.systemSettings.sitePhone2}}
+                </li>
+              {{/if}}
+              {{#if req.we.systemSettings.siteDaysOfService}}
+                <li>
+                  <i class="glyphicon glyphicon-time"aria-hidden="true"></i> {{{req.we.systemSettings.siteDaysOfService}}}
+                </li>
+              {{/if}}
+              {{#if req.we.systemSettings.siteEmail1}}
+                <li>
+                  <i class="glyphicon glyphicon-envelope"aria-hidden="true"></i> <a href="mailto:{{req.we.systemSettings.siteEmail1}}">E-mail: {{req.we.systemSettings.siteEmail1}}</a>
+                </li>
+              {{/if}}
+              {{#if req.we.systemSettings.siteEmail2}}
+                <li>
+                  <i class="glyphicon glyphicon-envelope"aria-hidden="true"></i> <a href="mailto:{{req.we.systemSettings.siteEmail2}}">E-mail: {{req.we.systemSettings.siteEmail2}}</a>
+                </li>
+              {{/if}}
+            </ul>
+
+            <br>{{we-menu menuSocial class="list-inline icon-style-1"}}
+          </address>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-item-2">
+          <h4>Sobre</h4>
+          <p class="footer-site-description">{{{req.we.systemSettings.siteDescription}}}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-item-3">
+          {{we-menu req.we.menu.main}}
+        </div>
+      </div>
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         {{we-menu req.we.menu.social}}
         <p class="copyright text-muted">
