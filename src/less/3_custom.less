@@ -228,6 +228,40 @@
 
 }
 
+.image {
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 0 2px 0 1px;
+  background: #f5f2f0;
+
+  img {
+    margin: 8px 8px 0 8px;
+  }
+
+  &.align-left {
+    margin: 3px 5px 3px 0px;
+    float: left;
+  }
+
+  &.align-center {
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.align-right {
+    float: right;
+    margin: 3px 0px 3px 5px;
+  }
+
+  figcaption {
+    font-size: 0.5em;
+    margin: 6px 8px 6px 8px;
+    text-align: center;
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .intro-header .page-heading,
