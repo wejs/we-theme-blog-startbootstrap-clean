@@ -1,27 +1,36 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var less = require('gulp-less');
-var minifyCSS = require('gulp-minify-css');
+const gulp = require('gulp'),
+ concat = require('gulp-concat'),
+ less = require('gulp-less'),
+ minifyCSS = require('gulp-minify-css');
 
-gulp.task('scripts', function() {
+function scripts() {
   return gulp.src(['src/js/**/*.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('files/public'));
-});
+}
+exports.scripts = scripts;
 
-gulp.task('styles', function() {
+function styles() {
   return gulp.src(['src/less/**/*.less'])
     .pipe(less())
     .on('error', console.log)
     .pipe(minifyCSS())
     .pipe(concat('style.css'))
     .pipe(gulp.dest('files/public'));
-});
+}
+exports.styles = styles;
 
-// Requires gulp >=v3.5.0
-gulp.task('watch', function () {
-  gulp.watch('src/js/**', ['scripts']);
-  gulp.watch('src/less/**', ['styles']);
-});
+function watch_js() {
+  return gulp.watch('src/js/**', scripts);
+}
+exports.watch_js = watch_js;
 
-gulp.task('default', ['scripts', 'styles', 'watch']);
+function watch_css() {
+  return gulp.watch('src/less/**', styles);
+}
+exports.watch_js = watch_js;
+
+exports.watch = gulp.parallel(watch_js, watch_css);
+
+// Default task - Run with command 'gulp'
+exports.default = gulp.series(scripts, styles, exports.watch);
